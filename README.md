@@ -1,6 +1,11 @@
-# GIS_TEST_2020
+*** GIS_TEST_2020***:
 Repositório com teste prático para a seleção de candidatos para a vaga de estagiário GIS.
 
+ATENÇÃO:
+Mande o link do seu pull request para diego.gomes@climatempo.com.br
+  	
+---
+*** Teste ***:
 Vamos disponibilizar 2 arquivos:
 	CSV - Uma lista de temperaturas diarias por cidade (colunas long / lat)
 	NetCDF - Que contenha varios tempos (pode ser humidade ou prec horario)
