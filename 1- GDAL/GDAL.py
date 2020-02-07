@@ -5,7 +5,7 @@ import osgeo.ogr, osgeo.osr as ogr, osr #we will need some packages
 from osgeo import ogr #and one more for the creation of a new field
 
 driver = ogr.GetDriverByName("ESRI Shapefile")
-data_source = driver.CreateDataSource("temperatura_maxmin_GIS.shp")
+data_source = driver.CreateDataSource("./1- GDAL/temperatura_maxmin_GIS.shp")
 srs = osr.SpatialReference()
 srs.ImportFromEPSG(4326)
 
@@ -25,7 +25,7 @@ field_plus = ogr.FieldDefn("plus", ogr.OFTString)
 field_plus.SetWidth(32)
 layer.CreateField(field_plus)
 
-with open('temperatura_maxmin_GIS.csv', "r") as csv_toRead:
+with open('./1- GDAL/temperatura_maxmin_GIS.csv', "r") as csv_toRead:
   csv_file = csv.DictReader(csv_toRead, delimiter=';',  fieldnames=['city', 'lat', 'long', 'temp', 'value'])
   for row in csv_file:
 
