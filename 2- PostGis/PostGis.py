@@ -1,3 +1,4 @@
+# Importando as bibliotecas de terceiros
 import postgresql
 import json
 
@@ -26,15 +27,14 @@ geojson = json.loads(arq.read())
 
 # Executando as ações preparadas anteriormente
 with db.xact():
-# Percorrendo o array 'features' que contêm as informações de cada registro e inserindo na tabela.  
-  for feature in geojson['features']:
-    make_gis_table(f"{feature['properties']['city']}",
+# Percorrendo o array 'features' que contêm as informações de cada registro e inserindo na tabela.
+  list(map(lambda feature: make_gis_table(f"{feature['properties']['city']}",
       f"{feature['properties']['max/min']}",
       feature['properties']['lat'],
       feature['properties']['long'],
       feature['properties']['temp'],
-      f"{feature['properties']['plus']}")
-
+      f"{feature['properties']['plus']}"), geojson['features']))
+   
 #Inserção concluída - Primeira etapa
 
 # Convertendo todos os pontos em uma única geometria de linha
