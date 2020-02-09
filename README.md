@@ -1,6 +1,6 @@
 ## Arthur Barbero
 
-Gostaria de agradecer pela oportunidade de participar do teste, aprendi muito nestes 4 dias, já valeu a pena.
+
 
 Para a realização deste teste, utilizei dos seguintes recursos:
 
@@ -17,6 +17,39 @@ Para a realização deste teste, utilizei dos seguintes recursos:
  - GDAL (https://pypi.org/project/GDAL/)
  - py-postgresql (https://pypi.org/project/py-postgresql/)
   
+  
+### Testes
+
+**GDAL**
+
+Para concluir a primeira etapa do teste, criei o programa em python ``GDAL.py`` que cria o ShapeFile e insere com as informações obtidas do ``.csv``, nesta etapa também, adicionei o atributo novo contido na etapa Plus, no final de sua compilação ele criará os arquivos ShapeFiles com o mesmo nome do ``.csv``.
+
+Na conversão dos arquivos ShapeFiles para GeoJson, criei o programa em python ``GeoJson.py`` que lê o arquivo recém criado ``.shp`` e cria uma 'String' adcionando as features contidas no layer do ShapeFile para depois realizar a escrita de um novo arquivo, de mesmo nome com extensão ``.json``, utilizando a biblioteca ``json`` nativa do Python.
+
+----
+
+**PostGis**
+
+A segunda etapa do teste realizei de duas maneiras. De primeiro caso, apliquei os comandos contidos na aplicação GDAL acessando o banco e importando o ``Json`` diretamente para uma nova tabela no PostgreSQL em um database local, porém, o teste solicitava as querys executadas, então por via das dúvidas, criei um programa em Python, ``PostGis.py``, que realiza todas as querys de forma automatizada, sem que eu tenha que acessar campo por campo em varios ``inserts``, ao iniciar o programa, primeiramente ele utiliza-ra da biblioteca ``py-postgresql`` para criar a conexão com o banco local, depois irá criar uma tabela com as colunas exatas para o arquivo ``Json``, em seguida iteramos o array de features que existem dentro do GeoJson a fim de selecionar os valores para concluir os ``inserts``.
+Neste mesmo programa, depois de importar e inserir em uma tabela, ele imprime na tela a geometria em linha ``LineString`` utilizando uma query construida da mesma maneira, iterando sobre o array de features e pegando os pontos de 'long' e 'lat' com o comando ``ST_MakePoint`` e depois utilizando o comando ``ST_MakeLine`` e imprimindo com o formato dado pelo comando ``ST_AsEWKT``.
+
+Nesta etapa não consegui realizar o 'Plus' pois não consegui formar poligonos com os arrays entregues, ou realmente não compreendi o enunciado, porém, gostaria muito de poder ter o conhecimento de como formar eles ou qual o formato entregue. Nesses 4 dias de teste pensei que a lógica por traz de apresentar as temperaturas que intersectassem nestes polígonos seria utilizando dos comandos:
+
+>SELECT temp FROM tabela t WHERE ST_Intersects(geometria, ST_MakePoint(t.long, t.lat))
+
+Porém, ainda assim não realizei esta parte. Se possível gostaria de saber ao final desta seleção quais seriam as respostas destes testes Plus.
+
+----
+**GeoServer**
+
+Na terceira etapa, foi a que tive menos contato em minha experiência, então me contive em realizar apenas o solicitado.
+No diretório ``3- Geoserver`` encontra-se o arquivo zipado do GeoServer que editei nesta etapa, mas se por via das dúvidas a camada criada apresentar algum erro, tomei a liberdade de exportar a camada em formato PNG que se encontra na pasta. 
+A importação do arquivo ``NetCDF`` foi realizada sem problemas e a escala de cores foi realizada como estilização de camada no formato ``SLD``. Os valores de escalonamento escolhidos foram ``270, 280, 290, 300, 310`` trazendo maiores tons de amarelo e laranja ao mapa.
+
+Em vista do tempo não realizei o teste Plus deste. Porém possuo conhecimentos em manipular a biblioteca do OpenLayers em nivel de Front-End, tanto em Vue.JS e React.JS.
+
+----
+**Gostaria de agradecer pela oportunidade de participar do teste, aprendi muito nestes 4 dias, já valeu a pena, tomo a liberdade de encaminhar novamente meu currículo pelo repositório.**
 
 Estou a disposição para quaisquer dúvidas!
 
