@@ -1,17 +1,37 @@
-***GIS_TEST_2020***:
+<p align="center">
+  <a href="http://www.climatempo.com.br">
+      <img src="http://i.imgur.com/Q9lCAMF.png" alt="Climatempo" width="300px"/>
+  </a>
+</p>
 
-Repositório com teste prático para a seleção de candidatos para a vaga de estagiário GIS.
+___
 
-ATENÇÃO:
-Mande o link do seu pull request para diego.gomes@climatempo.com.br
-  	
----
-*** Teste ***:
-Vamos disponibilizar 2 arquivos:
+
+## Processo de recrutamento
+
+Olá candidato, pronto para participar do nosso processo de recrutamento?
+
+### Requisitos
+
+Bons conhecimentos em:
+
+- Python
+- QGis
+- PostGis
+- Geoserver
+- NetCDF
+- Sistema de coordenadas
+
+Repositório com teste prático para a seleção de candidatos para a vaga de GIS.
+
+## Os Desafios
+
+Vamos disponibilizar 2 arquivos para os desafios:
+
 	CSV - Uma lista de temperaturas diarias por cidade (colunas long / lat)
+
 	NetCDF - Que contenha varios tempos (pode ser humidade ou prec horario)
 
-***DESAFIO***:
 
 **GDAL**
 
@@ -27,7 +47,7 @@ Conversão dos arquivos shapefiles de temperatura em geojson (enviar comandos)
 		Se for igual a 40 ou maior, o valor deve ser 'extreme'];
 		Obs: Deve-se enviar os comandos utilizados para reproduzirmos na Climatempo.
 	Converter a unidade de temperatura do arquivo NetCDF de Kelvin para Celsius 
----
+
 **PostGis**
 
 Após converter os arquivos csv em geojson, importar para o postgres (enviar a query SQL)
@@ -40,7 +60,7 @@ Manipulação do geojson, convertendo todos os pontos em uma única geometria de
 		[-46.264 -24.429 -39.233 -19.155] Rio de Janeiro
 		[-60.352 -18.775 -23.656 0.286]   Nordeste 
 	
----
+
 **Geoserver**
 
 Em seu computador, deverá subir uma aplicacao geoserver em um servidor WEB para editar o projeto Geoserver (2.15.4) disponibilizado em http://geoserver.org/.
