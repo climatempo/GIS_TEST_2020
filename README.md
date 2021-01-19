@@ -13,7 +13,7 @@ Olá candidato, pronto para participar do nosso processo de recrutamento?
 
 ### Requisitos
 
-Bons conhecimentos em:
+**Bons conhecimentos em:**
 
 - Python
 - QGis
@@ -22,9 +22,11 @@ Bons conhecimentos em:
 - NetCDF
 - Sistema de coordenadas
 
-Repositório com teste prático para a seleção de candidatos para a vaga de GIS.
+**Diferenciais:**
 
-<br/>
+- Mapserver
+- Geopandas
+
 
 ## Os Desafios
 
@@ -65,7 +67,7 @@ Manipulação do geojson, convertendo todos os pontos em uma única geometria de
 
 **Geoserver**
 
-Em seu computador, deverá subir uma aplicacao geoserver em um servidor WEB para editar o projeto Geoserver (2.15.4) disponibilizado em http://geoserver.org/.
+Em seu computador, deverá subir uma aplicacao geoserver em um servidor WEB para editar o projeto Geoserver disponibilizado em http://geoserver.org/release/stable/.
 
 No projeto, cadastrar a camada utilizando o arquivo NETCDF.
 
