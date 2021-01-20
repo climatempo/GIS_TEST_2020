@@ -112,10 +112,19 @@ Criar uma escala de cor (criada com CSS) e aplicar a camada (a escala deve ter i
 
 ## ATENÇÃO ##
 
-<kbd>FAÇA O **FORK** DO DESAFIO</kbd>
+O processo do desafio deve ser:
 
-<kbd>CRIE UM PROJECT.md COM A EXPLICAÇÃO DE COMO DEVEMOS EXECUTAR OS COMANDOS E QUERIES UTILIZADAS PARA OS DESAFIOS ASSIM COMO O MÁXIMO DE DETALHES POSSÍVEL DO QUE FOI FEITO.</kbd>
+1. Faça o fork do desafio.
 
-<kbd>O PROJETO **GEOSERVER EDITADO** DEVERÁ SER ZIPADO E COMITADO JUNTO COM AS CONSULTAS E COMANDOS.</kbd>
+2. Crie um **PROJECT.md** com a explicação de como devemos executar os comandos e queries utilizados para os desafios assim como o máximo de detalhes possivel do que foi feito.
 
-<kbd>APÓS O TÉRMINO DO DESAFIO, FAÇA UM **PULL REQUEST** E ENVIE UM E-MAIL PARA diego.gomes@climatempo.com.br</kbd>
+3. O projeto **GEOSERVER EDITADO** deverá ser zipado e incluido no projeto.
+
+4. Após concluir faça um pull request.
+
+5. Envie um e-mail para diego.gomes@climatempo.com.br
+
+___
+
+Qualquer dúvida entre em contato com nossa equipe.
+
