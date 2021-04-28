@@ -122,7 +122,7 @@ O processo do desafio deve ser:
 
 4. Após concluir faça um pull request.
 
-5. Envie um e-mail para diego.gomes@climatempo.com.br
+5. Preencha o [formulario](https://docs.google.com/forms/d/e/1FAIpQLSfPIwojh04iSxIrrOJSyrMvYcStLpoO3luR11ZxBY_pkWsjGA/viewform).
 
 ___
 
